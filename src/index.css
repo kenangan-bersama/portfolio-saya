@@ -1,0 +1,101 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+
+
+@theme {
+  --font-sans: Figtree, system-ui, sans-serif;
+
+  /* Navy Blue Theme */
+  --color-navy-50: #e6f0ff;
+  --color-navy-100: #cce0ff;
+  --color-navy-200: #99c2ff;
+  --color-navy-300: #66a3ff;
+  --color-navy-400: #3385ff;
+  --color-navy-500: #0066ff;
+  --color-navy-600: #0052cc;
+  --color-navy-700: #003d99;
+  --color-navy-800: #002966;
+  --color-navy-900: #001433;
+  --color-navy-950: #000a1a;
+
+  /* Alias untuk primary = navy */
+  --color-primary-50: #e6f0ff;
+  --color-primary-100: #cce0ff;
+  --color-primary-200: #99c2ff;
+  --color-primary-300: #66a3ff;
+  --color-primary-400: #3385ff;
+  --color-primary-500: #0066ff;
+  --color-primary-600: #0052cc;
+  --color-primary-700: #003d99;
+  --color-primary-800: #002966;
+  --color-primary-900: #001433;
+  --color-primary-950: #000a1a;
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+/* Custom component styles untuk portfolio */
+.btn-primary {
+  background: linear-gradient(to right, var(--color-primary-500), var(--color-primary-600));
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: rgb(31 41 55);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: 1px solid rgb(55 65 81);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: all 0.3s;
+}
+
+.glass {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@keyframes gradient {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 3s ease infinite;
+}
